@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg_bold[green]%} %{$fg_bold[red]%}λ %s"
+local ret_status="%(?: %{$fg_bold[red]%}λ %s"
 
 function get_pwd(){
   git_root=$PWD
@@ -15,7 +15,7 @@ function get_pwd(){
   echo $prompt_short_dir
 }
 
-PROMPT='%{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%} 
+PROMPT='🔥 %{$fg[white]%}$(get_pwd) $(git_prompt_info)%{$reset_color%}%{$reset_color%} 
 $ret_status '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
